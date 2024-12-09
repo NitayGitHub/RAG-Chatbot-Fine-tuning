@@ -1,6 +1,6 @@
-# RAG Q&A Chatbot with CLM or Flan-T5
+# RAG Q&A Chatbot with Llama2 or Flan-T5
 ## **Introduction**
-This repository hosts a Retrieval-Augmented Generation (RAG) Question-Answering Chatbot powered by state-of-the-art language models such as CLM (Conditional Language Model) or Flan-T5.
+This repository hosts a Retrieval-Augmented Generation (RAG) Question-Answering Chatbot powered by state-of-the-art language models such as Llama2 or Flan-T5.
 The chatbot first retrieves relevant information from Wikipedia articles and then uses a language model to generate contextually accurate answers. This approach is ideal for applications that require precise and well-informed responses, such as customer support, educational tools, and research assistants.
 
 ## **Installation**
@@ -23,7 +23,7 @@ To install these libraries, you can use the following command:
 ```
 
 ## **Data Sources**
-The Wikipedia articles and Q&A data for this project were downloaded from [Question-Answer Dataset](https://www.kaggle.com/datasets/rtatman/questionanswer-dataset).
+This project's Wikipedia articles and Q&A data were downloaded from [Question-Answer Dataset](https://www.kaggle.com/datasets/rtatman/questionanswer-dataset).
 
 The dataset includes three question files, one for each year: S08, S09, and S10. I used only S08 for faster results.
 The columns in this file are as follows: ArticleTitle, Question, Answer, DifficultyFromQuestioner, DifficultyFromAnswerer, ArticleFile.
