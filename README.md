@@ -1,4 +1,4 @@
-# RAG Q&A Chatbot with Llama2 or Flan-T5
+# RAG Q&A Chatbot Fine-tuning
 ## **Introduction**
 This repository hosts a Retrieval-Augmented Generation (RAG) Question-Answering Chatbot powered by state-of-the-art language models such as Llama2 or Flan-T5.
 The chatbot first retrieves relevant information from Wikipedia articles and then uses a language model to generate contextually accurate answers. This approach is ideal for applications that require precise and well-informed responses, such as customer support, educational tools, and research assistants.
@@ -31,8 +31,8 @@ The columns in this file are as follows: ArticleTitle, Question, Answer, Difficu
 To evaluate the model the data was split into 80% (481 questions) for training and 20% (121 questions) for validation.
 
 ## **Training Results**
-I used the FAISS vector store because creating embeddings takes ~3 minutes, while it will take ~35 minutes with the Chroma vector store. Furthermore, Flan-T5 was fine-tuned using the PEFT method LoRA. 
-Finally, I achieved a **67% ROUGE Recall Score** with Flan-T5 and **71% ROUGE Recall Score** with larger models like wizardLM or llama2-7b.
+I used the FAISS vector store because creating embeddings takes ~3 minutes, while it will take ~35 minutes with the Chroma vector store. Furthermore, Flan-T5 and Llama2-7b were fine-tuned using the PEFT method LoRA. 
+Finally, I achieved a **64% ROUGE Recall Score** with Flan-T5 and **69% ROUGE Score** with larger models like wizardLM or llama2-7b.
 
 ## **Future Work**
 I didn't have time to try 'flan-t5-base-squad2' which is fine-tuned for Extractive QA. Also, it's worth testing different embedding models and pipeline parameters (temperature, top_p, penalty).
