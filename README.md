@@ -28,11 +28,11 @@ This project's Wikipedia articles and Q&A data were downloaded from [Question-An
 The dataset includes three question files, one for each year: S08, S09, and S10. I used only S08 for faster results.
 The columns in this file are as follows: ArticleTitle, Question, Answer, DifficultyFromQuestioner, DifficultyFromAnswerer, ArticleFile.
 
-To evaluate the model the data was split into 80% (481 questions) for training and 20% (121 questions) for validation.
+To evaluate the model, the data was split into 80% (481 questions) for training and 20% (121 questions) for validation.
 
 ## **Training Results**
 I used the FAISS vector store because creating embeddings takes ~3 minutes, while it will take ~35 minutes with the Chroma vector store. Furthermore, Flan-T5 and Llama2-7b were fine-tuned using the PEFT method LoRA. 
-Finally, I achieved a **64% ROUGE Recall Score** with Flan-T5 and **69% ROUGE Score** with larger models like wizardLM or llama2-7b.
+Finally, I achieved a **69% ROUGE Recall Score** with Flan-T5 and **73% ROUGE Score** with larger models like wizardLM or llama2-7b.
 
 ## **Future Work**
-I didn't have time to try 'flan-t5-base-squad2' which is fine-tuned for Extractive QA. Also, it's worth testing different embedding models and pipeline parameters (temperature, top_p, penalty).
+I didn't have time to try 'flan-t5-base-squad2', which is fine-tuned for Extractive QA. Also, it's worth testing different embedding models and pipeline parameters (temperature, top_p, penalty).
